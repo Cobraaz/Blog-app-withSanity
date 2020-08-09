@@ -8,7 +8,7 @@ body {
   background-color: #f4f7f9;
 }
 
-.clickable {
+.clickable:hover {
   cursor: pointer;
 }
 
@@ -233,7 +233,18 @@ body {
 .blog-image {
   margin-bottom: 10px;
   text-align: center;
+
+  &-left {
+    float: left;
+    margin-right: 30px;
+  }
+
+  &-right {
+    float: right;
+    margin-left: 30px;
+  }
 }
+
 .image-alt {
   margin-top: 3px;
 }

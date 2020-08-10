@@ -1,6 +1,7 @@
 import PageLayout from "components/PageLayout";
 import BlogHeader from "components/BlogHeader";
 import { getBlogBySlug, getAllBlogs } from "lib/api";
+import PreviewAlert from "components/PreviewAlert";
 import { Row, Col } from "react-bootstrap";
 import ErrorPage from "next/error";
 import { useRouter } from "next/router";
@@ -9,7 +10,7 @@ import { urlFor } from "lib/api";
 
 import BlogContent from "components/BlogContent";
 
-const BlogDetail = ({ blog }) => {
+const BlogDetail = ({ blog, preview }) => {
   const router = useRouter();
 
   if (!router.isFallback && !blog?.slug) {
@@ -25,6 +26,7 @@ const BlogDetail = ({ blog }) => {
     <PageLayout className="blog-detail-page">
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
+          {preview && <PreviewAlert />}
           <BlogHeader
             title={blog.title}
             subtitle={blog.subtitle}
@@ -40,10 +42,11 @@ const BlogDetail = ({ blog }) => {
   );
 };
 
-export async function getStaticProps({ params }) {
-  const blog = await getBlogBySlug(params.slug);
+export async function getStaticProps({ params, preview = false, previewData }) {
+  // Todo: pass preview to getBlogBySlug and fetch draft blog
+  const blog = await getBlogBySlug(params.slug, preview);
   return {
-    props: { blog },
+    props: { blog, preview },
   };
 }
 

@@ -28,3 +28,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Create `.env.local` find in the root folder with value of:
+
+SANITY_DATASET_NAME=YOUR_DATASET_NAME // from sanity dashboard
+SANITY_PROJECT_ID=YOUR_PROJECT_ID // from sanity dashboard
+SANITY_PREVIEW_SECRET=YOUR_PREVIEW_SECRET // unique string
+SANITY_API_TOKEN=YOUR_API_TOKEN // from sanity dashboard

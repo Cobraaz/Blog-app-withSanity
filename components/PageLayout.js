@@ -9,13 +9,12 @@ export default function PageLayout({ children, className }) {
       <Container>
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         <div className={`page-wrapper ${className}`}>{children}</div>
+        <hr />
         <footer className="page-footer">
           <div>
-            <a href="#">courses</a>
+            <a href="https://www.facebook.com/anuj.bansal.739">github</a>
             {" | "}
-            <a href="#">github</a>
-            {" | "}
-            <a href="#">facebook</a>
+            <a href="https://github.com/Cobraaz">facebook</a>
           </div>
         </footer>
       </Container>

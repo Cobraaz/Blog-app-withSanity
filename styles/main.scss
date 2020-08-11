@@ -1,0 +1,33 @@
+// COMPONENTS
+@import "./components/card";
+@import "./components/footer";
+@import "./components/header";
+
+// PAGES
+@import "./blog-detail";
+
+html,
+body {
+  height: 100%;
+  font-family: Nunito, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: #f4f7f9;
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
+
+.hoverable:hover {
+  opacity: 0.7;
+}
+
+.red-text {
+  color: #f44336 !important;
+}
+
+.page-wrapper {
+  padding-top: 20px;
+}

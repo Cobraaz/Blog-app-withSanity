@@ -23,10 +23,12 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "highlight.js/styles/darcula.css";
 import "react-toggle/style.css";
-import "styles/index.scss";
+import "styles/main.scss";
 
-export default ({ Component, pageProps }) => (
+const App = ({ Component, pageProps }) => (
   <ThemeProvider>
     <Component {...pageProps} />
   </ThemeProvider>
 );
+
+export default App;

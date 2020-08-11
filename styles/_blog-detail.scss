@@ -1,0 +1,57 @@
+.blog-image {
+  margin-bottom: 10px;
+  text-align: center;
+
+  &-left {
+    float: left;
+    margin-right: 30px;
+    max-width: 50%;
+  }
+
+  &-right {
+    float: right;
+    margin-left: 30px;
+    max-width: 50%;
+  }
+
+  > img {
+    max-width: 100%;
+  }
+}
+
+.image-alt {
+  margin-top: 3px;
+}
+
+.blog-detail-page {
+  font-size: 19px;
+
+  .blog-detail-header {
+    .lead {
+      font-size: 17px;
+    }
+    &-title {
+      font-size: 52px;
+    }
+  }
+}
+
+.admin-intro {
+  .welcome-text {
+    font-size: 18px;
+  }
+}
+
+blockquote {
+  position: relative;
+  color: #999;
+  font-size: 1.25em;
+  font-family: Georgia, Times New Roman, Times, serif;
+  font-style: italic;
+  margin: 0;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-origin: border-box;
+  background-size: 2em;
+}

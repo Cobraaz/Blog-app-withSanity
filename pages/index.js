@@ -16,8 +16,8 @@ export default function Home({ blogs, preview }) {
   });
 
   const { pages, isLoadingMore, isReachingEnd, loadMore } = useGetBlogsPages({
-    blogs,
     filter,
+    blogs,
   });
 
   return (
@@ -55,5 +55,6 @@ export async function getStaticProps({ preview = false }) {
       blogs,
       preview,
     },
+    revalidate: 1,
   };
 }
